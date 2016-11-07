@@ -1,0 +1,430 @@
+.fl {
+  float: left;
+}
+.bg {
+  background: #FA68E7;
+}
+body {
+  overflow: -Scroll;
+  overflow-y: hidden;
+}
+.leftpanel {
+  background: #233646;
+  height: 780px;
+  padding: 0;
+}
+.title {
+  color: #FAFCFE;
+  padding: 15px;
+  padding-left: 10px;
+  text-align: center;
+}
+.title h1 {
+  width: 80%;
+  padding-left: 5px;
+  color: #EE8820;
+}
+.title h2 {
+  width: 80%;
+}
+#accordion h3 {
+  background: #2F4050;
+  color: #8B9BC0;
+  border-color: #31343C;
+}
+#accordion h3:hover {
+  color: #FAFCFE;
+}
+#accordion div {
+  background: #233646;
+  color: #FAFCFE;
+  border-color: #31343C;
+  padding: 0;
+}
+#accordion div p {
+  width: 216px;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+#accordion div p:hover {
+  background: #1A2A37;
+}
+.rightpanel {
+  background: #D6E5F1;
+  height: 780px;
+  padding: 0px;
+}
+.rightpanel .toppanel {
+  height: 120px;
+  border-bottom: 5px solid #2C2E2F;
+}
+.rightpanel .toppanel .header {
+  background: #D6E5F1;
+  margin-bottom: 10px;
+  height: 48%;
+}
+.rightpanel .toppanel .greet {
+  width: 240px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 750px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.rightpanel .toppanel .glyphicon-user {
+  margin-right: 10px;
+  color: #1C41E7;
+}
+.rightpanel .toppanel .list {
+  background: #F1F9FA;
+  height: 44%;
+}
+.rightpanel .toppanel span.username {
+  font-size: 25px;
+  color: #EB1367;
+  font-family: Georgia, serif;
+}
+.rightpanel .toppanel ul {
+  list-style: none;
+}
+.rightpanel .toppanel li {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 8px;
+  cursor: default;
+  border: 1px solid #DDDADA;
+}
+.rightpanel .toppanel li:hover {
+  background: #94E1F6;
+}
+.rightpanel .toppanel span {
+  width: 20px;
+  padding: 0 3px;
+}
+.rightpanel .toppanel span:hover {
+  cursor: pointer;
+}
+.rightpanel .bottompanel {
+  padding: 20px;
+}
+button#logout {
+  position: absolute;
+  margin-left: 240px;
+  font-size: 6px;
+}
+.main {
+  background: #F2F2F8;
+  width: 100%;
+  overflow-y: scroll;
+  height: 570px;
+}
+.register .title {
+  padding: 0 0 0 20px;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 3px solid #94A3A5;
+  color: #000;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: left;
+}
+.register .form {
+  padding: 40px 100px;
+}
+.register .form span {
+  margin-bottom: 40px;
+  display: block;
+}
+.register .form label {
+  color: #086507;
+}
+.register .leftform {
+  padding-right: 80px;
+}
+.register .leftform button {
+  margin-right: 8px;
+}
+.register .rightform {
+  padding-left: 80px;
+}
+.register .rightform p {
+  margin-top: 8px;
+}
+.register .rightform input.status {
+  color: #000;
+}
+.register .rightform label.radio-inline {
+  color: #000;
+}
+.loss .lossleft,
+.loss .lossright {
+  background: #DEDEBD;
+  display: block;
+  width: 48%;
+}
+.loss .lossleft {
+  padding-bottom: 20px;
+}
+.loss .lossleft .lossbtn {
+  margin-left: 110px;
+  display: block;
+  float: left;
+}
+.loss .lossleft .losstip {
+  float: left;
+  font-size: 12px;
+  margin-top: 8px;
+  margin-left: 30px;
+  font-weight: 800;
+  color: #F14812;
+}
+.loss .lossright {
+  margin-left: 4%;
+}
+.loss .lossform {
+  padding: 40px 20px;
+}
+.loss .lossform input {
+  margin-left: 20px;
+}
+.loss .lossform .form-group {
+  margin-bottom: 20px;
+}
+.viptitle {
+  color: #000;
+  height: 50px;
+  line-height: 50px;
+  font-weight: 800;
+  border-bottom: 3px solid #94A3A5;
+}
+.psw .pswleft,
+.psw .pswright {
+  background: #DEDEBD;
+  display: block;
+  width: 48%;
+}
+.psw .pswleft {
+  padding-bottom: 20px;
+}
+.psw .pswleft .pswbtn {
+  margin-left: 175px;
+}
+.psw .pswright {
+  margin-left: 4%;
+}
+.psw .pswform {
+  padding: 40px 20px;
+}
+.psw .pswform input {
+  margin-left: 20px;
+}
+.psw .pswform .form-group {
+  margin-bottom: 20px;
+}
+.add_admin .bottom {
+  padding: 40px 60px 40px 20px;
+}
+.add_admin .form-group {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.managerlist {
+  background: #FFF;
+  height: 100%;
+}
+.managerlist .list {
+  padding: 20px 10px;
+}
+.managerlist .tbody input[type=text] {
+  width: 150px;
+}
+.managerlist .con {
+  height: 155.23px;
+}
+.managerlist .input-group {
+  width: 200px;
+  margin-left: 820px;
+  margin-bottom: 20px;
+}
+.managerlist button.btn.btn-danger {
+  margin-bottom: -50px;
+}
+.managerlist a.modify,
+.managerlist a.cancel {
+  margin-left: 20px;
+}
+.managerlist td,
+.managerlist th {
+  width: 24%;
+}
+.managerlist .first {
+  width: 4%;
+}
+.managerlist ul.pagination {
+  margin-right: 0px;
+}
+.testTip {
+  width: 200px;
+  position: fixed;
+  margin-left: 450px;
+  border: 1px solid #04B502;
+  display: none;
+  z-index: 2000;
+}
+.testTip .panel-heading {
+  color: #DD18B7;
+  font-size: 15px;
+  font-weight: 400;
+}
+.msg {
+  padding: 10px 20px;
+}
+.ui-dialog-titlebar {
+  background: #E47C41;
+}
+.bg-primary {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  font-weight: 400;
+}
+.mask {
+  position: absolute;
+  filter: alpha(opacity=75);
+  background-color: #27220E;
+  z-index: 600;
+  opacity: 0.75;
+  -moz-opacity: 0.75;
+  display: none;
+}
+.abovemask {
+  width: 600px;
+  text-align: center;
+  background: #fff;
+  padding: 20px 30px;
+  margin-top: 150px;
+  z-index: 2000;
+}
+.masktitle {
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #EE2D2D;
+}
+input.maskvalue {
+  width: 300px;
+  height: 40px;
+  font-size: 35px;
+  font-weight: 800;
+}
+.maskbottom {
+  padding: 20px;
+}
+button.btn.btn-success.maskbutton {
+  width: 150px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.setrank td,
+.setrank th {
+  width: 200px;
+  padding: 2px 0;
+  height: 60px;
+}
+p.err {
+  color: #E33838;
+  font-weight: 400;
+}
+p.moneyerr,
+p.carderr,
+p.counterr,
+p.ordernumerr {
+  color: #E33838;
+  font-weight: 400;
+  margin-left: 65px;
+  font-size: 18px;
+  position: absolute;
+}
+p.counterr,
+p.ordernumerr {
+  font-weight: 800;
+  margin-left: 35px;
+}
+p.ordernumerr {
+  margin-left: 45px;
+}
+input[name=discount] {
+  width: 100px;
+  height: 30px;
+}
+.money {
+  padding: 10px 20px;
+}
+.deposit,
+.moneyout,
+.withdraw {
+  padding: 20px 10px;
+}
+.deposit input,
+.moneyout input,
+.withdraw input {
+  margin-left: 8px;
+}
+div.order {
+  padding-top: 20px;
+  padding-right: 180px;
+  margin-bottom: 20px;
+  float: right;
+}
+div.order input {
+  margin-left: 8px;
+}
+div.order input[type=text] {
+  width: 240px;
+}
+#searchinput {
+  margin-left: 320px;
+  margin-top: -55px;
+}
+#ordertable {
+  border-collapse: collapse;
+}
+#ordertable .mybody tr:hover {
+  cursor: pointer;
+  background: #AEABAB;
+}
+#ordertable .mybody tr:hover th {
+  border: 0px;
+}
+#ordertable td,
+#ordertable th {
+  border: 1px solid #7A7474;
+  width: 106px;
+  padding: 5px 2px;
+}
+div.nav {
+  position: absolute;
+  top: 400px;
+}
+#consumeList {
+  padding: 20px;
+}
+#consumeList td,
+#consumeList th {
+  width: 150px;
+}
+#consumeList table {
+  margin-top: 20px;
+}
+#consumeList .input-group {
+  width: 200px;
+}
+#consumeList ul.pagination {
+  margin-right: 0px;
+  margin-top: 80px;
+}

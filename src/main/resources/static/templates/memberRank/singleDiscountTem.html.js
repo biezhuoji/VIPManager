@@ -1,0 +1,1 @@
+define(function(require){ return '<td>{{memberRank}}</td><td>{{discount}}</td><td><button class=\"btn btn-success modify\">修改</button></td>'})

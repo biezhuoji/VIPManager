@@ -1,0 +1,45 @@
+<div id="mask" class="mask"></div> 
+<div class="money">
+    <div class="col-md-6">
+		<div class = 'viptitle'>会员充值</div>
+		<div class="form-inline">
+		    <div class="form-group deposit">
+		    	<label for="cardNumber">会员卡号</label>
+		    	<input disabled type="text" class="form-control" id="cardNumber" value={{cardNumber}}>
+		    </div>
+		    <div class="form-group deposit" id="deposit">
+		    	<label for="money">充值金额</label>
+		    	<input type="text" class="form-control" id="money">
+		    	<p class="moneyerr"></p>
+		    </div>
+		</div>
+		<div class="deposit">
+			<button type="submit" class="btn btn-primary depositbtn">确认充值</button>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class = 'viptitle'>&nbsp;&nbsp;&nbsp;&nbsp;会员信息</div>
+		<div class="form-inline">
+		    <div class="form-group deposit">
+		    	<label for="cardnum">&nbsp;&nbsp;&nbsp;&nbsp;会员卡号</label>
+		    	<input disabled type="text" class="form-control" id="cardnum" value={{cardNumber}}>
+		    </div>
+		    <div class="form-group deposit">
+		    	<label for="name" >&nbsp;&nbsp;&nbsp;&nbsp;会员姓名</label>
+		    	<input disabled type="text" class="form-control" id="name" value={{memberName}}>
+		    </div>
+		    <div class="form-group deposit">
+		    	<label for="type">会员卡等级</label>
+		    	<input disabled type="text" class="form-control" id="type" value={{memberRank}}>
+		    </div>
+		    <div class="form-group deposit">
+		    	<label for="tel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机号</label>
+		    	<input  disabled type="text" class="form-control" id="tel" value={{memberPhone}}>
+		    </div>
+		    <div class="form-group deposit">
+		    	<label for="leftmoney">&nbsp;&nbsp;&nbsp;&nbsp;可用余额</label>
+		    	<input disabled type="text" class="form-control" id="leftmoney" value={{money}} >
+		    </div>
+		</div>
+	</div>
+</div>

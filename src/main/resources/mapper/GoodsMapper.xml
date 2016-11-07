@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sprint.models.dao.GoodsDao">
+	<insert id="createGoods">
+		insert into goods (goods_number, goods_name, goods_price, goods_count)values(#{goodsNumber}, #{goodsName}, #{goodsPrice}, #{goodsCount})
+	</insert>
+
+	<delete id="deleteGoods">
+		delete from goods where id = #{id}
+	</delete>
+
+	<update id="updateGoods">
+		update goods set goods_name=#{goodsName}, goods_price=#{goodsPrice}, goods_count=#{goodsCount} where
+		goods_number = #{goodsNumber}
+	</update>
+
+	<select id="findGoods" resultType="com.sprint.models.domain.Goods">
+		select * from goods
+	</select>
+
+	<select id="findLikeGoodsName" resultType="com.sprint.models.domain.Goods">
+		select * from goods where goods_name like #{goodsName}
+	</select>
+
+	<select id="findByGoodsNumber" resultType="com.sprint.models.domain.Goods">
+		select * from goods where goods_number = #{goodsNumber}
+	</select>
+
+	<update id="updateGoodsCount">
+		update goods set goods_count=goods_count-#{goodsCount} where goods_number = #{goodsNumber}
+	</update>
+</mapper>

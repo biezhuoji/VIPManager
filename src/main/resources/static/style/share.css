@@ -1,0 +1,87 @@
+.container{
+	width: 1353px;
+	height: 660px;
+	background: url(../images/5.jpg);
+	background-size: 1353px 660px;
+	/*background-position: 0 40%;*/
+	margin:0 auto;
+}
+#login{
+	width: 400px;
+	height: 450px;
+	border: 1px solid gray;
+	position: relative;
+	left:60%;
+	top:5%;
+	background-color: white;
+	text-align: center;
+	border-radius: 5%;
+	opacity: 0.8;
+}
+#inputDiv{
+	margin-top: -15px;
+}
+#userDiv,#passwordDiv{
+	margin-top: 15px;
+	padding-left:50px;
+}
+
+#passwordInput,#adminInput{
+	width: 300px;
+	padding-left: 30px;
+}
+button[name=submitBtn]{
+	width: 304px;
+	margin-left: 15px;
+}
+#registerDiv{
+	/*background: blue;*/
+	margin-top:61px;
+}
+h3{
+	margin-top: 50px;
+}
+#glyphiconUser,#glyphiconLock{
+	position: relative;
+	left: -162px;
+	top: 30px;
+}
+#missPassworld{
+	position: relative;
+	left: 120px;
+	top: -44px;
+}
+
+#register{
+	position: relative;
+	left: 55px;
+}
+.checkbox{
+	position: relative;
+	left: -88px;
+	top: 34px;
+	/*background: red;*/
+}
+.codeimg{
+	background:url('../images/code.jpg');
+	background-size: 80px 30px;
+	padding: 0px 8px;
+	position: absolute;
+	margin-left: 110px;
+	margin-top: -30px;
+	text-align: center;
+	line-height: 30px;
+}
+
+.testTip{
+	width:200px;
+	position: fixed;
+	margin-top: -450px;
+	margin-left: 493px;
+	border: 1px solid #04B502;
+	display: none;
+	background:	#FAEBD7;
+}
+.msg {
+	padding: 10px 20px;
+}

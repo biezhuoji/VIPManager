@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sprint.models.dao.ConsumeRecordDao">
+	<insert id="createConsumeRecord">
+		insert into consume_record (member_name,member_rank,order_number,card_number,goods_number,goods_name,goods_price,goods_count,consume_money)values(#{memberName}, #{memberRank},#{orderNumber}, #{cardNumber}, #{goodsNumber},#{goodsName}, #{goodsPrice}, #{goodsCount}, #{consumeMoney})	
+	</insert>
+
+	<select id="findByOrderNumber" resultType="com.sprint.models.domain.ConsumeRecord">
+		select * from consume_record where order_number=#{orderNumber}
+	</select>
+
+	<delete id="deleteConsumeRecord">
+		delete from consume_record where id=#{id};
+	</delete>
+	
+	<select id="findByCardNumber" resultType="com.sprint.models.domain.ConsumeRecord">
+		select * from consume_record where card_number = #{cardNumber} and status = 1
+	</select>
+	
+	<select id="findByCardNumber1" resultType="com.sprint.models.domain.ConsumeRecord">
+		select * from consume_record where card_number = #{cardNumber} and status = 0
+	</select>
+	
+	<select id="findAll" resultType="com.sprint.models.domain.ConsumeRecord">
+		select * from consume_record where status = 1
+	</select>
+	
+	<select id="findAll1" resultType="com.sprint.models.domain.ConsumeRecord">
+		select * from consume_record where status = 0
+	</select>
+	
+	<update id="updateStatus">
+		update consume_record set status=#{status} where order_number=#{orderNumber} 
+	</update>
+	
+	<update id="updateConsumeRecord">
+		update consume_record set member_name=#{memberName},member_rank=#{memberRank},card_number=#{cardNumber},goods_number=#{goodsNumber},goods_name=#{goodsName},goods_price=#{goodsPrice},goods_count=#{goodsCount},consume_money=#{consumeMoney} where order_number=#{orderNumber}
+	</update>
+</mapper>

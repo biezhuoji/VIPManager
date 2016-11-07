@@ -1,0 +1,76 @@
+<html>
+ <head> 
+  <meta charset="UTF-8" /> 
+  <title>用户登录</title> 
+  <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" /> 
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script> 
+  <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script> 
+  <script src="http://cdn.bootcss.com/require.js/2.1.22/require.min.js"></script> 
+  <link rel="stylesheet" href="./style/share.css" /> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <div id="login"> 
+     <h3>用户登录</h3> 
+     <div id="inputDiv"> 
+      <div id="userDiv"> 
+       <span class="glyphicon glyphicon-user" id="glyphiconUser"></span> 
+       <input type="text"  class="form-control" id="adminInput" /> 
+      </div> 
+      <div id="passwordDiv"> 
+       <span class="glyphicon glyphicon-lock" id="glyphiconLock"></span> 
+       <input type="password" placeholder="请输入密码" id="passwordInput" class="form-control" /> 
+      </div> 
+     </div> 
+     <div class="checkbox"> 
+      <label> <input type="checkbox" /> Remember me </label> 
+     </div> 
+     <div id="registerDiv"> 
+      <a href="javascript:;" id="missPassworld">忘记密码？</a> 
+      <br />
+      <br /> 
+      <button type="submit" class="btn btn-info" id="submitButton">登录</button> 
+     </div> 
+   </div> 
+   <div class="testTip panel panel-default border-success"> 
+    <div class="panel-heading text-center">
+      温馨提示 
+    </div> 
+    <div class="msg text-center"></div> 
+   </div> 
+  </div>
+  <script>
+  	$("#submitButton").click(function(){
+				console.log($("#adminInput").val());
+				var data = {
+					adminAccount:$("#adminInput").val(),
+					adminPassword: $("#passwordInput").val()
+				}
+			$.ajax({
+			 	type: "POST",
+				url:'/admin/login',
+				contentType: "application/json; charset=utf-8",
+				data: JSON.stringify(data),
+				dataType: 'json',
+				success: function (resp) {
+					console.log(resp)
+					if(resp.result != null) {
+						localStorage.setItem("login_name",resp.result.adminName);
+						localStorage.setItem("premission",resp.result.premission);
+						localStorage.setItem("success_url",resp.result.url);
+						window.location.href = resp.result.url;
+					} else {
+					//	window.location.href = '/login';
+						alert(resp.status.message);
+					}	
+					console.log("ok!")
+				},
+				error: function () {
+					console.log("error")
+				}	
+			})
+		}) 	
+  </script>
+  <script>require(['./js/config.js'])</script>  
+ </body>
+</html>

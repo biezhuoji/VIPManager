@@ -1,0 +1,1 @@
+define(function(require){ return '<p class=\"bg-primary\">会员等级设置</p><table class=\"setrank table table-striped\"><thead><th>会员等级</th><th>折扣</th><th>操作</th></thead><tbody class=\"mybody\"></tbody></table>'})

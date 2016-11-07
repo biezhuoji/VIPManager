@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sprint.models.dao.MemberRankDao">
+	<update id="updateMemberRank">
+		update members_rank set discount=#{discount} where member_rank = #{memberRank}
+	</update>
+
+	<select id="findById" resultType="com.sprint.models.domain.MemberRank">
+		select * from members_rank where id = #{id}
+	</select>
+
+	<select id="findAll" resultType="com.sprint.models.domain.MemberRank">
+		select * from members_rank
+	</select>
+
+	<select id="findByMemberRank" resultType="com.sprint.models.domain.MemberRank">
+		select * from members_rank where member_rank=#{memberRank}
+	</select>
+</mapper>

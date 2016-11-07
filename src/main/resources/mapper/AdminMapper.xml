@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sprint.models.dao.AdminDao">
+	<select id="findByAdminAccount" resultType="com.sprint.models.domain.AdminWithoutPwd">
+		select * from admin where admin_account = #{adminAccount} and admin_password = #{adminPassword}
+	</select>
+
+	<select id="findByAdminAccountNumber" resultType="com.sprint.models.domain.AdminWithoutPwd">
+		select * from admin where admin_account = #{adminAccount}
+	</select>
+	
+	<insert id="createAdmin" > 
+		insert into admin (admin_account, admin_password, admin_phone, admin_name)values(#{adminAccount}, #{adminPassword}, #{adminPhone}, #{adminName});	
+	</insert>
+
+	<delete id="deleteAdmin">
+		delete from admin where id = #{id}
+	</delete>
+	
+	<update id="updateAdmin"> 
+		update admin set admin_password=#{adminPassword}, admin_phone=#{adminPhone}, admin_name=#{adminName} where id = #{id}	
+	</update>
+
+	<select id="findAdmin" resultType="com.sprint.models.domain.AdminWithoutPwd">
+		select * from admin
+	</select>
+
+	<select id="findAdminByKey" resultType="com.sprint.models.domain.AdminWithoutPwd">
+		select * from admin where admin_name like #{key}
+	</select>
+	
+	<select id="findByAdminId" resultType="com.sprint.models.domain.AdminWithoutPwd">
+		select * from admin where id = #{id}
+	</select>
+</mapper>

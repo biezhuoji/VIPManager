@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>会员卡管理系统</title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+	<link href="http://cdn.bootcss.com/jqueryui/1.12.0/jquery-ui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../style/style.css" />
+	<link rel="stylesheet" type="text/css" href="../style/addGood.css" />
+	<script src="http://cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+	<script>require(['../js/config.js'])</script>
+</head>
+<body id="body">
+	<div class="container-fluid" id="test">
+		<div class="row">
+			<div class="col-md-2 leftpanel">
+				<div class="title">
+					<h1>会员卡</h1>
+					<h2>管理系统</h2>
+				</div>
+				<div id="accordion">
+				<h3>管理员管理</h3>
+				<div>
+					<p class="addmanagermenu">管理员登记</p>
+					<p class="managerlistmenu">管理员列表</p>
+			    </div>
+			    <h3>消费收银</h3>
+				<div>
+					<p class="goodconsumemenu">商品消费</p>
+					<p class="orderList">订单列表</p>
+					<p class="cousumelist">消费记录</p>
+			    </div>
+				<h3>储值管理</h3>
+				<div>
+					<p class="depositmenu">会员充值</p>
+					<p class="moneyoutmenu">余额转账</p>
+					<p class="withdrawmenu">余额提现</p>
+			    </div>
+			    <h3>会员管理</h3>
+			    <div>
+			   		<p class="registermenu">会员登记</p>
+			   		<p class="memberlistmenu">会员列表</p>
+			   		<p class="lossmenu">会员挂失</p>
+			   		<p class="pswmenu">修改密码</p>
+			   		<p class="setdiscountmenu">会员等级设置</p>
+			    </div>
+			    <h3>商品管理</h3>
+			    <div>
+			    	<p class="goodregister">商品录入</p>
+					<p class="goodmanage">商品管理</p>
+			    </div>
+				</div>
+			</div>
+			<div class="col-md-10 rightpanel">
+				<div class="testTip panel panel-default border-success">
+					<div class="panel-heading text-center">
+					    温馨提示
+					</div>
+					<div class="msg text-center"></div> 
+				</div>
+				<div class="toppanel">
+					<div class="header">
+		  				<div class = "greet">
+		  					<button class="btn btn-danger" id="logout">退出登陆</button>
+		  					<span class="glyphicon glyphicon-user"></span>hello<span class="username"></span>
+		  				</div>
+	  				</div>
+					<div class="list">
+					    <ul class="menulist">
+					    	<li class = "firstpage">首页</li>
+					    </ul>
+					</div>
+				</div>
+				<div class="bottompanel">
+					<div class="main">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dialog-confirm" title="确认删除吗？">
+	  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>这些信息将被永久删除，并且无法恢复,您确定吗？</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+define(function(require){ return '<td class = \"first\"><input type=\"checkbox\" class = \"info\"></td><td>{{cardNumber}}</td><td>{{goodsName}}</td><td>{{goodsPrice}}</td><td>{{goodsCount}}</td><td>{{orderNumber}}</td><td><a href=\"javascript:;\" class=\"deleteSingleOrder\">取消订单</a></td>'})

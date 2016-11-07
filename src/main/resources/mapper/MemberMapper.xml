@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sprint.models.dao.MemberDao">
+	<insert id="createMember" parameterType="com.sprint.models.domain.Member">
+		insert into member (card_number, member_rank, member_name, member_phone, member_password, status, money)values(#{cardNumber}, #{memberRank}, #{memberName}, #{memberPhone}, #{memberPassword}, #{status}, #{money})
+	</insert>
+
+	<select id="findByCardNumber" resultType="com.sprint.models.domain.MemberWithoutPwd">
+		select * from member where card_number = #{cardNumber}
+	</select>
+	
+	<delete id="deleteMember">
+		delete from member where id = #{id}
+	</delete>
+
+	<update id="updateMember">
+		update member set member_rank=#{memberRank}, member_name=#{memberName}, member_phone=#{memberPhone},  money=#{money}, status=#{status} where card_number=#{cardNumber} 
+	</update>
+	
+	<select id="findByKey" resultType="com.sprint.models.domain.MemberWithoutPwd">
+		select * from member where card_number=#{key}
+	</select>
+	
+	<select id="findAll" resultType="com.sprint.models.domain.MemberWithoutPwd">
+		select * from member
+	</select>
+
+	<update id="updateMoneyIn">
+		update member set money=money + #{money} where card_number = #{cardNumber} 
+	</update>
+	
+	<update id="updateMoneyOut">
+		update member set money=money - #{money} where card_number = #{cardNumber} 
+	</update>
+	
+	<update id="updateStatus"> 
+		update member set status=#{status} where card_number = #{cardNumber} 
+	</update>
+	
+	<update id="updatePassword">
+		update member set member_password=#{newMemberPassword} where card_number=#{cardNumber}
+	</update>
+
+	<select id="findByAccount" resultType="com.sprint.models.domain.MemberWithoutPwd">
+		select * from member where member_password=#{memberPassword} and card_number=#{cardNumber}
+	</select>
+</mapper>
+

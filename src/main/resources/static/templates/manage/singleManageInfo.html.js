@@ -1,0 +1,1 @@
+define(function(require){ return '<td class = \"first\"><input type=\"checkbox\" class = \"info\"></td><td>{{adminName}}</td><td>{{adminAccount}}</td><td>{{adminPhone}}</td><td><a href=\"javascript:;\" class=\"delete\">删除</a><a href=\"javascript:;\" class=\"modify\">修改</a></td>'})

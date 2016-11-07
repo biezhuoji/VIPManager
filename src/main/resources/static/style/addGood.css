@@ -1,0 +1,44 @@
+.addGoods{
+	width: 100%;
+	height: 800px;
+	margin-top: 10px;
+	background-color: #eee;
+}
+.addGoods .form-control{
+	width: 300px;
+	margin:10px auto ;
+}
+.addGoods span{
+	position: relative;
+	left:238px;
+	top: 46px;
+	font-size: 28px;
+	font-weight: bold;
+}
+button[name=save]{
+	margin-left: 230px;
+	margin-top: 20px;
+}
+button[name=cancel]{
+	background-color: white;
+	color: black;
+	margin-top: 20px;
+	/*margin-left: 200px;*/
+}
+.goodsList{
+	width: 100%;
+	height: 800px;
+	margin-top: 5px;
+	/*background-color: #eee;*/
+}
+#form-control{
+	width: 200px;
+	position:relative; 
+	top: 10px;
+	left: 11px;
+}
+button[name=searchBtn]{
+	position: relative;
+	top: -27px;
+	left: 222px;
+}
